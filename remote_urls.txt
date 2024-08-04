@@ -1,0 +1,6 @@
+ssh://peovshp6@pixelinc.ca:27/home/peovshp6/clencylogistics.ca
+git@github.com:salimvski/clencylogistics-web.git
+git@github.com:salimvski/clencylogistics-web.git
+git remote set-url origin git@github.com:salimvski/clencylogistics-web.git
+git remote set-url origin ssh://peovshp6@pixelinc.ca:27/home/peovshp6/clencylogistics.ca
+git remote -v

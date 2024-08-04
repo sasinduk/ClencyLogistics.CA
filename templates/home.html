@@ -1,0 +1,266 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <div class="site-blocks-cover overlay" style="background-image: url({% static 'images/hero-bg_10.jpg' %});"
+        data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center text-center">
+
+                <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+
+
+                    <h1 class="text-white font-weight-light mb-5 text-uppercase font-weight-bold">Canadian Freight
+                        Services</h1>
+                    <p><a href="#menu" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <div id="menu" class="container">
+            <div class="row align-items-center no-gutters align-items-stretch overlap-section">
+                <div class="col-md-4">
+                    <div class="feature-1 pricing h-100 text-center">
+                        <div class="icon">
+                            <span class="icon-dollar"></span>
+                        </div>
+                        <h2 class="my-4 heading">Best Prices</h2>
+                        <p>Clency Logistics is the leader in freight services for more than 5 years. Our prices are out
+                            of competition
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="free-quote bg-dark h-100">
+                        <h2 class="my-4 heading  text-center">Get Free Quote</h2>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="fq_company">Name of the company</label>
+                                <input type="text" class="form-control btn-block" id="fq_name" name="fq_company"
+                                    placeholder="Enter Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="fq_pickup">PICK UP</label>
+                                <select name="fq_pickup" class="form-control btn-block form-select mb-3"
+                                    aria-label=".form-select-lg example">
+                                    <option value="QC" selected>QC</option>
+                                    <option value="ON">ON</option>
+                                    <option value="MB">MB</option>
+                                    <option value="AB">AB</option>
+                                    <option value="BC">BC</option>
+                                    <option value="NS">NS</option>
+                                    <option value="NL">NL</option>
+                                    <option value="NB">NB</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="fq_delivery">DELIVERY</label>
+                                <select name="fq_delivery" class="form-control btn-block"
+                                    aria-label=".form-select-lg example">
+                                    <option value="ON" selected>ON</option>
+                                    <option value="QC">QC</option>
+                                    <option value="MB">MB</option>
+                                    <option value="AB">AB</option>
+                                    <option value="BC">BC</option>
+                                    <option value="NS">NS</option>
+                                    <option value="NL">NL</option>
+                                    <option value="NB">NB</option>
+                                </select>
+                            </div>
+                            <div class="mt-2">
+                                <label for="fq_equipement">EQUIPEMENT</label>
+                                <select name="fq_equipement" class="form-control btn-block"
+                                    aria-label=".form-select-lg example">
+                                    <option value="DRYVAN" selected>DRYVAN</option>
+                                    <option value="REEFERS">REEFERS</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3 mt-2">
+                                <label for="fq_email">Email</label>
+                                <input type="text" class="form-control btn-block" id="fq_email" name="fq_email"
+                                    placeholder="Enter Email">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="fq_phone">Phone Number</label>
+                                <input type="text" class="form-control btn-block" id="fq_phone" name="fq_phone"
+                                    placeholder="Enter Phone">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit"
+                                    class="btn btn-primary text-white py-2 px-4 btn-block" value="Get Quote">
+                            </div>
+                    </div>
+                </div>
+    </form>
+    <div class="col-md-4">
+        <div class="feature-3 pricing h-100 text-center">
+            <div class="icon">
+                <span class="icon-phone"></span>
+            </div>
+            <h2 class="my-4 heading">24/7 Support</h2>
+            <p>Any questions ? We are available at any moment for more information !</p>
+        </div>
+    </div>
+</div>
+</div>
+</form>
+<div id="offer" class="site-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center border-primary">
+                <h2 class="mb-0 text-primary" id="offer">What We Offer</h2>
+                <p class="color-black-opacity-5">Freight Services</p>
+            </div>
+        </div>
+        <div class="row align-items-stretch">
+            <div class="col-md-12 col-lg-4 mb-4 mb-lg-0 d-flex justify-content-center">
+                <div class="unit-4 d-flex">
+                    <div class="unit-4-icon">
+                        <h3 class="text-sm-center text-md-center text-lg-center"><span class="text-primary flaticon-frontal-truck mr-2"></span>Free Quote</h3>
+                        <p class="text-justify">Clency logistics has the tools and technologies to help you fulfil your
+                            LTL, FTL, and parcel shipping needs, whether you need assistance finding a fast quote in a
+                            matter of minutes or need assistance contacting carriers. Finding a carrier and keeping
+                            track of your merchandise are both made simpler by our tools.</p>
+                        <p class="mb-0 text-sm-center text-md-start text-lg-center"><a href="/contact/">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4 mb-4 mb-lg-0 d-flex justify-content-center">
+                <div class="unit-4 d-flex">
+                    <div class="unit-4-icon text-sm-center text-md-start text-lg-center">
+                        <h3 class=""><span class="text-primary flaticon-frontal-truck mr-2"></span>Competitive prices</h3>
+                        <p class="text-justify">The price of fuel, the amount of equipment that is available, and truck
+                            drivers all have an impact on freight rates. Even though those variables might be beyond
+                            your control, doing your homework and planning ahead can typically make it simple to
+                            estimate the freight shipping expenses for each of your shipments. To start, use our free
+                            quote service, we usually get better prices because we work constantly with transport
+                            companies and owner operators which help us get the best price from existing supply chains
+                            and also protect the transporter from bad practices.</p>
+                        <p class="mb-0 text-sm-center text-md-start text-lg-center"><a href="/contact/">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4 mb-4 mb-lg-0 d-flex justify-content-center">
+                <div class="unit-4 d-flex">
+                    <div class="unit-4-icon text-sm-center text-md-start text-lg-center">
+                        <h3 class=""><span class="text-primary flaticon-frontal-truck mr-2"></span>Service and adaptability</h3>
+                        <p class="text-justify">You'll come across items like business invoicing, cargo liability
+                            restrictions, and customs clearance as you get ready for the cross-border freight shipping
+                            process. When you ship your cargo with us, you'll have access to the tools you need to face
+                            the uncharted and streamline cross-border transportation.</p>
+                        <p class="mb-0 text-sm-center text-md-start text-lg-center"><a href="/contact/">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="site-section">
+    <!--   <div class="container"></div> -->
+
+
+
+    <div class="owl-carousel nonloop-13">
+        <!--
+            <div>
+            <a href="#" class="unit-1 text-center">
+                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                <div class="unit-1-text">
+                <h3 class="unit-1-heading">Storage</h3>
+                <p class="px-5">An integral part of the supply chain and distribution of your goods, freight storage allows for products to be held until they need to be delivered. You can stock a freight storage facility with your products while waiting for orders to start coming in.   </p>
+                </div>
+            </a>
+            </div>
+        -->
+
+        <!--
+            <div>
+            <a href="#" class="unit-1 text-center">
+                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+                <div class="unit-1-text">
+                <h3 class="unit-1-heading">Air Transports</h3>
+                <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
+                </div>
+            </a>
+            </div>
+            -->
+        <div>
+            <a href="#" class="unit-1 text-center">
+                <img src="{% static 'images/img_3.jpg' %}" alt="Image" class="img-fluid">
+                <div class="unit-1-text">
+                    <h3 class="unit-1-heading">Cargo Transports</h3>
+                    <p class="px-5">Freight transport is the physical process of transporting commodities and
+                        merchandise goods
+                        and cargo. </p>
+                </div>
+            </a>
+        </div>
+        <!--
+            <div>
+            <a href="#" class="unit-1 text-center">
+                <img src="images/img_4.jpg" alt="Image" class="img-fluid">
+                <div class="unit-1-text">
+                <h3 class="unit-1-heading">Cargo Ship</h3>
+                <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
+                </div>
+            </a>
+            </div>
+            -->
+        <!--
+            <div>
+            <a href="#" class="unit-1 text-center">
+                <img src="images/img_5.jpg" alt="Image" class="img-fluid">
+                <div class="unit-1-text">
+                <h3 class="unit-1-heading">Ware Housing</h3>
+                <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
+                </div>
+            </a>
+            </div>
+        -->
+
+
+    </div>
+</div>
+
+<div class="site-blocks-cover overlay inner-page-cover"
+    style="background-image: url({% static 'images/hero_bg_7.jpg' %}); background-attachment: fixed;">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+            <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
+                <h2 class="text-white font-weight-light mb-5 h1">Clency Logistics</h2>
+                <h2 class="text-white font-weight-light mb-5 h1">Do It Once Right</h2>
+                {% comment %} <h1 class="text-white font-weight-light mt-5 text-uppercase font-weight-bold">Do It Once
+                    Right</h1> {% endcomment %}
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section border-top">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h2 class="mb-5 text-black">Try Our Services</h2>
+                <p class="mb-0"><a href="/contact/" class="btn btn-primary py-3 px-5 text-white">Get Started</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

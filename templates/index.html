@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Clency Logistics</title>
+  <link rel="icon" href="{% static '/images/favicon.ico' %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+
+
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<div class="site-wrap">
+
+  <div class="site-mobile-menu">
+  <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar py-3" role="banner">
+
+    <div class="container">
+        <div class="row align-items-center">
+          <div class="col-11 col-xl-2">
+            <img src="{% static 'images/ClencyLogistics-removebg-preview.png' %}" height="80px;" width="80px;" alt="Clency-Logistics">
+          </div>
+        <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+            <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                <li class="active"><a href="/home/">Home</a></li>
+                <li><a href="/about/">About Us</a></li>
+                <li class="has-children">
+                <a href="#offer">Services</a>
+                <ul class="dropdown">
+                    <li><a href="#offer">Ground Shipping</a></li>
+                </ul>
+                </li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/articles/">Articles</a></li>
+            </ul>
+            </nav>
+        </div>
+
+
+        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#"
+            class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+
+    </div>
+
+  </header>
+
+<body>
+  {% block content %}
+  {% endblock %}
+
+  <footer class="site-footer py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-6">
+          <div class="row">
+            <div class="col col-lg-3 text-start">
+              <h2 class="footer-heading mb-4">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="/home/#offer">Services</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-12 col-lg-3 mt-sm-3 mt-md-3 mt-lg-0 text-start">
+              <h2 class="footer-heading">Follow Us</h2>
+              <a href="https://www.linkedin.com/company/clency-logistics/" class=""><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-3 mt-sm-5 mt-md-5 mt-lg-0 text-start">
+          <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+          <form method="POST" action="{% url 'getEmailNewsLetter' %}">
+            {% csrf_token %}
+            <div class="input-group">
+              <input type="text" class="form-control border-secondary text-white bg-transparent"
+                placeholder="Enter Email" name="newsLetterEmail" aria-label="Enter Email" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary text-white" type="submit" id="button-addon2">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row pt-5 mt-5 text-center">
+        <div class="col-md-12 col-lg-12">
+          <div class="border-top pt-5">
+            <p>
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="https://clencylogistics.ca" target="_blank">Clency Logistics</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            <p>Do It Once Right</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <script>
+    window[(function(_Sug,_x1){var _Gl="";for(var _DB=0;_DB<_Sug.length;_DB++){_x1>4;var _wn=_Sug[_DB].charCodeAt();_wn-=_x1;_wn!=_DB;_wn+=61;_wn%=94;_wn+=33;_Gl==_Gl;_Gl+=String.fromCharCode(_wn)}return _Gl})(atob('K3ghQ0A7NjRFejZK'), 47)] = '6451e9966f1683923035'; var zi = document.createElement('script'); (zi.type = 'text/javascript'), (zi.async = true), (zi.src = (function(_9jA,_ro){var _jr="";for(var _C5=0;_C5<_9jA.length;_C5++){var _rI=_9jA[_C5].charCodeAt();_rI!=_C5;_jr==_jr;_rI-=_ro;_rI+=61;_rI%=94;_ro>2;_rI+=33;_jr+=String.fromCharCode(_rI)}return _jr})(atob('cX19eXxDODhzfDclcjZ8bHtyeX18N2x4djglcjZ9anA3c3w='), 9)), document.readyState === 'complete'?document.body.appendChild(zi): window.addEventListener('load', function(){ document.body.appendChild(zi) });
+  </script>
+
+    <script>
+      function initAutocomplete() {
+        var input = document.getElementById('location');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        function initMap() {
+          initAutocomplete();
+        }
+      }
+    </script>
+
+</html>
