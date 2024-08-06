@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+{% load static %}
+{% load front %}
+{% block content %}
+<div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url({% static 'images/hero_bg_1.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+  
+            <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+              <h1 class="text-white font-weight-light text-uppercase font-weight-bold">Our Articles</h1>
+              <p class="breadcrumb-custom"><a href="/home/">Home</a> <span class="mx-2">&gt;</span> <span>Articles</span></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+  
+      
+    
+      <div class="pt-5">
+        <div class="container pt-5">
+          <div class="row">
+            {% for article in articles %}
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+              
+              <div class="h-entry">
+                <img src="{{ MEDIA_URL }}{{ article.image.url }}" alt="Image" class="img-fluid">
+                <h2 class="font-size-regular"><a href="/articles/{{article.id}}/{{ article.title|striptags }}">{{ article.title|safe }}</a></h2>
+                <div class="meta mb-4">Montreal<span class="mx-2">&bullet;</span> {{ article.creationDate|date:"M d, Y" }}<span class="mx-2">&bullet;</span> <a>{{ article.category|safe }}</a></div>
+                <p class="text-justify">{{ article.description|safe }}</p>
+              </div> 
+            </div>
+            {% endfor %}
+      </div>
+      <div class="container text-center pb-5">
+        <div class="row">
+          <div class="col-12">
+            <p class="custom-pagination">
+              {% if articles.has_other_pages %}
+                {% if articles.has_previous %}
+                  <a href="?{% url_replace page=articles.previous_page_number %}">&lt;</a>
+              {% endif %}
+              {% for i in articles.paginator.page_range %}
+                {% if articles.number == i %}
+                <span>{{i}}</span>
+                {% endif %}
+              {% endfor %}
+              {% if articles.has_next %}
+                <a href="?{% url_replace page=articles.next_page_number %}">&gt;
+                </a>
+              {% else %}
+                <span>&gt;</span>
+              {% endif %}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+{% endblock %}

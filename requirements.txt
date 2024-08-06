@@ -1,0 +1,6 @@
+python-dotenv
+django-tinymce
+validate_email
+Pillow
+django
+mysqlclient
