@@ -1,0 +1,18 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/peovshp6/clencylogistics.ca"
+PassengerBaseURI "/"
+PassengerPython "/home/peovshp6/virtualenv/clencylogistics.ca/3.8/bin/python"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
+
+RewriteEngine On
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://clencylogistics.ca/$1 [L,R=301]
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://clencylogistics.ca/$1 [L,R=301]
