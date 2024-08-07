@@ -10,6 +10,7 @@ class RequestAdmin(admin.ModelAdmin):
     model = Request
     list_display = ['subject', 'firstName', 'lastName', 'email', 'date', 'resolved']
 
+
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(ClientEmail)
 admin.site.register(Request, RequestAdmin)

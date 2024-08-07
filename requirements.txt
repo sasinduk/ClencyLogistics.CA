@@ -2,5 +2,7 @@ python-dotenv
 django-tinymce
 validate_email
 Pillow
-django
+django==4.1.5
 mysqlclient
+psycopg2
+whitenoise
