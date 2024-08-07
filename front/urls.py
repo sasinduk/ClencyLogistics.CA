@@ -24,8 +24,8 @@ urlpatterns = [
     path("home/", views.HomeView.as_view(), name="home"),
     path("about/", views.AboutView.as_view(), name="about"),
     path("contact/", views.ContactView.as_view(), name="contact"),
-    path("articles/", views.ArticleView.as_view(), name="articles"),
-    path("articles/<str:pk>/<str:title>", views.getArticle, name="article"),
+    # path("articles/", views.ArticleView.as_view(), name="articles"),
+    # path("articles/<str:pk>/<str:title>", views.getArticle, name="article"),
 
     # Utils
     path("getEmailNewsLetter/", views.getEmailNewsLetter, name="getEmailNewsLetter"),
