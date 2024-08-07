@@ -78,29 +78,29 @@ class ContactView(TemplateView):
         return redirect("/contact/")
 
 
-def getArticle(request, **kwargs):
-    if request.method == "GET":
-        context = {}
-        try:
-            article = Article.objects.get(id=kwargs["pk"])
-            context["article"] = article
-        except:
-            return redirect("/articles/")
-        return render(request, "article.html", context)
+# def getArticle(request, **kwargs):
+#     if request.method == "GET":
+#         context = {}
+#         try:
+#             article = Article.objects.get(id=kwargs["pk"])
+#             context["article"] = article
+#         except:
+#             return redirect("/articles/")
+#         return render(request, "article.html", context)
 
-class ArticleView(TemplateView):
-    """Article view"""
-    template_name = "articles.html"
+# class ArticleView(TemplateView):
+#     """Article view"""
+#     template_name = "articles.html"
     
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        articles = Article.objects.order_by('-creationDate').all()
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         articles = Article.objects.order_by('-creationDate').all()
         
-        paginator = Paginator(articles, 6)
-        page_number = self.request.GET.get("page", None)
-        articles = paginator.get_page(page_number)
-        context["articles"] = articles
-        return context
+#         paginator = Paginator(articles, 6)
+#         page_number = self.request.GET.get("page", None)
+#         articles = paginator.get_page(page_number)
+#         context["articles"] = articles
+#         return context
 
 
 def getEmailNewsLetter(request):
